@@ -23,9 +23,10 @@ jobs:
           pip install pygame
 
       - name: Create Executable
+        continue-on-error: true
         uses: sayyid5416/pyinstaller@v1
         with:
           python_ver: ${{ matrix.python-version }}
           spec: "snake.spec"
-          upload_exe_with_name: "SnakeGame"
+          upload_exe_with_name: "SnakeGame-${{ matrix.os }}"
           options: --onefile, --name "My App", --windowed,
