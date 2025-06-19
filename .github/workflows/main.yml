@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   pyinstaller-build:
-    runs-on: macos-latest
+    runs-on: macos-latest, windows-latest, macos-13, ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
