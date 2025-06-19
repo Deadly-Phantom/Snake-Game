@@ -24,7 +24,7 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='snake.app',
+    name='snake',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -40,5 +40,14 @@ coll = COLLECT(
     strip=False,
     upx=True,
     upx_exclude=[],
-    name='snake.app',
+    name='snake',
+    version='0.0.1',
+    info_plist={
+        'CFBundleShortVersionString': '0.0.1',
+        'CFBundleVersion': '0.0.1',
+        'LSApplicationCategoryType': 'public.app-category.game',
+        'NSHumanReadableCopyright': 'Copyright © 2025 Tristan aka THz',
+        'NSPrincipalClass': 'NSApplication',
+        'NSAppleScriptEnabled': False
+        },
 )
