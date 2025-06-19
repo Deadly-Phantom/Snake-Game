@@ -27,6 +27,5 @@ jobs:
         uses: sayyid5416/pyinstaller@v1
         with:
           python_ver: ${{ matrix.python-version }}
-          spec: "snake.spec"
+          spec: "snake-${{ matrix.os }}.spec"
           upload_exe_with_name: "SnakeGame-${{ matrix.os }}"
-          options: --onefile, --name "My App", --windowed,
